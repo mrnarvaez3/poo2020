@@ -1,7 +1,5 @@
 package taller1;
 
-import intropoo.Tiempo;
-
 public class EjecutaEstudiante {
     public static void main(String[] args) {
         // Creacion de objeto tiempo
