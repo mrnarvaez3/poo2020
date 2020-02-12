@@ -13,8 +13,7 @@ public class Estudiante {
         this.nota1 = nota1;
         this.nota2 = nota2;
     }
-
-    /**
+   /**
      * metodo para evaluar nota final
      * @param nota1
      * @param nota2

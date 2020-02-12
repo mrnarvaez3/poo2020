@@ -25,6 +25,5 @@ public class EjecutaEstudiante {
 
         //Salida de datos
         System.out.println(estudiante.presentar());
-
     }
 }
