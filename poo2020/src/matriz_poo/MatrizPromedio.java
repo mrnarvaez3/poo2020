@@ -1,4 +1,4 @@
-package matrizpoo;
+package matriz_poo;
 
 /**
  * Taller Grupal - Matrices
