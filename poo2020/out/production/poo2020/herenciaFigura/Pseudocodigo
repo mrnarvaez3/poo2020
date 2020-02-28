@@ -1,0 +1,134 @@
+Algoritmo Area de figura
+Clase figura
+    1. Variables:
+    nombre: cadena
+
+    metodo obtenerNombre(): cadena
+    retornar nombre
+    fin metodo
+
+    metodo establecerNombre(nombre1: cadena):
+    nombre = nombre1
+    fin metodo
+
+Fin clase
+------------------------------------------------------
+Clase triangulo hereda Figura
+    1. variables
+
+    baseTria, alturaTria, areaTria : Real
+
+
+    metodo constructorTria(baseTria: Real, alturaTria: Real):
+        baseTria = baseTria
+        alturaTria = alturaTria
+    fin metodo
+
+    metodo obtenerBaseTria():
+    retornar baseTria
+    fin metodo
+
+    metodo obtenerAlturaTria():
+    retornar alturaTria
+    fin metodo
+
+    metodo calcularAreaTria():
+        areaTria = (baseTria * alturaTria)/2
+    retornar areaTria
+    fin metodo
+
+-------------------------------------------------------
+
+Clase Rectangulo hereda Figura
+    1. variables
+    baseRec, alturaRec, areaRec : Real
+
+
+    metodo constructorRec(baseRec: Real, alturaRec: Real):
+        baseRec = baseRec
+        alturaRec = alturaRec
+    fin metodo
+
+    metodo obtenerBaseRec():
+    retornar baseRec
+    fin metodo
+
+    metodo obtenerAlturaRec():
+    retornar alturaRec
+    fin metodo
+
+    metodo obtenerAreaRec():
+        areaRec = baseRec * alturaRec
+    retornar areaRec
+    fin metodo
+Fin clase
+-------------------------------------------------------
+Clase Circulo hereda Figura
+    1. variables
+    radio, areaCir: real
+
+
+    metodo constructorCir(radio: Real):
+        radio = radio
+    fin metodo
+
+    metodo obtenerRadio():
+    retornar radio
+    fin metodo
+
+    metodo obtenerAreaCir():
+        areaCir = (3.1415) * (radio*radio)
+    retornar areaCir
+    fin metodo
+Fin clase
+---------------------------------------------------
+Clase Cuadrado hereda Figura
+    1. variables
+    lado, areaCua: real
+
+
+    metodo constructorCua(lado: Real):
+        lado = lado
+    fin metodo
+
+    metodo obtenerLado():
+    retornar lado
+    fin metodo
+
+    metodo obtenerAreaCua():
+        areaCir = lado* lado
+    retornar areaCua
+    fin metodo
+Fin clase
+-----------------------------------------------------------------
+Clase EjecutaFigura:
+    Clase principal:
+        opcion: Real
+        imprimir Menu
+        1. Area Triangulo
+        2. Area Cuadrado
+        3. Area Circulo
+        4. Area Rectangulo
+        leer opcion
+
+        segun opcion:
+
+        caso 1:
+        solicitar base, altura
+        leer base, altura
+        Declarar objeto clase Triangulo
+
+        caso 2:
+        solicitar base, altura
+        leer base, altura
+        Declarar objeto clase Cuadrado
+
+        caso 3:
+        solicitar base, altura
+        leer base, altura
+        Declarar objeto clase Circulo
+
+        caso 4:
+        solicitar base, altura
+        leer base, altura
+        Declarar objeto clase Rectangulo
