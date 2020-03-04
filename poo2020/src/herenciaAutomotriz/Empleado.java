@@ -1,6 +1,7 @@
 package herenciaAutomotriz;
-
+// Clase maestra Empleado
 public class Empleado {
+    //  Declaracion de variables
     protected String nombre;
     protected String departamento;
     protected String puesto;

@@ -3,13 +3,18 @@ import java.util.Scanner;
 public class EjecutaEmpleado {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
+        // Declaracion e inicializacion de variables
         int opcion;
         int contador = 0;
         int bandera = 1;
         String nombre, departamento, puesto;
         double sueldoMensual, precioTrabajo, ventas;
-        String cadena = "\tREPORTE DE NOMINA QUINCENAL\t\nRFC\tNOMBRE\tDEPTO\tPUESTO\tSUELDO QUINCENA\n";
+        String cadena = String.format("%20s\n-----------------------------------------------------------------------" +
+                "-----------------------\nRFC%20s%20S%20S%20S\n---------------------------------------------------------" +
+                "-------------------------------------\n", "REPORTE DE NOMINA QUINCENAL","NOMBRE", "DEPTO",
+                "PUESTO","SUELDO QUINCENA");
 
+        //  Dependiendo de la eleccion del usuario se obtendra datos diferentes y seran almacenados en una cadena
         do {
             System.out.println("------------------------------");
             System.out.println("Que clase de empleado desea ingresar?\n1.Administrativo\n2.Mecanico\n3.Vendedor");
@@ -28,9 +33,9 @@ public class EjecutaEmpleado {
                 sueldoMensual = teclado.nextDouble();
                 contador = contador + 1;
 
-                // creacion del empleado
+                // creacion del empleado Administrativo
                 EmpAdmin empAdmin = new EmpAdmin(sueldoMensual, nombre, departamento, puesto);
-                cadena = String.format("%s%d\t%s\t%s\t%s\t%.2f\n", cadena, contador, nombre, departamento, puesto, empAdmin.quincenaAdmin());
+                cadena = String.format("%s%d%20s%20s%20s%20.2f\n", cadena, contador, nombre, departamento, puesto, empAdmin.quincenaAdmin());
             } else {
                 if (opcion == 2) {
                     System.out.println("Ingrese el nombre del empleado:");
@@ -43,9 +48,9 @@ public class EjecutaEmpleado {
                     precioTrabajo = teclado.nextDouble();
                     contador = contador + 1;
 
-                    // creacion del empleado
+                    // creacion del empleado Mecanico
                     EmpMecan empMecan = new EmpMecan(precioTrabajo, nombre, departamento, puesto);
-                    cadena = String.format("%s%d\t%s\t%s\t%s\t%.2f\n", cadena, contador, nombre, departamento, puesto, empMecan.quincenaMecan());
+                    cadena = String.format("%s%d%20s%20s%20s%20.2f\n", cadena, contador, nombre, departamento, puesto, empMecan.quincenaMecan());
                 } else {
                     System.out.println("Ingrese el nombre del empleado:");
                     nombre = teclado.nextLine();
@@ -57,9 +62,9 @@ public class EjecutaEmpleado {
                     ventas = teclado.nextDouble();
                     contador = contador + 1;
 
-                    // creacion del empleado
+                    // creacion del empleado Vendedor
                     EmpVendedor empVendedor = new EmpVendedor(ventas, nombre, departamento, puesto);
-                    cadena = String.format("%s%d\t%s\t%s\t%s\t%.2f\n", cadena, contador, nombre, departamento, puesto, empVendedor.quincenaVendedor());
+                    cadena = String.format("%s%d%20s%20s%20s%20.2f\n", cadena, contador, nombre, departamento, puesto, empVendedor.quincenaVendedor());
                 }
             }
             System.out.println("Desea ingresar mas empleados?\n1.Si\n2.No");
@@ -70,8 +75,6 @@ public class EjecutaEmpleado {
         }while(bandera ==1);
 
         System.out.println(cadena);
-
-
 
     }
 }

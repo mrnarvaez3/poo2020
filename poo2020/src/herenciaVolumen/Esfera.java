@@ -1,5 +1,5 @@
 package herenciaVolumen;
-
+// clase hija de Figura
 public class Esfera extends Figura{
     double radioEsfera, areaEsfe;
 

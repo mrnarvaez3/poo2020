@@ -1,5 +1,5 @@
 package herenciaVolumen;
-
+// Clase maestra volumen
 public class Figura {
     protected String nombre;
 

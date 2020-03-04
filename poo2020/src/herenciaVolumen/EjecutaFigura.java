@@ -9,7 +9,7 @@ public class EjecutaFigura {
         String nombre;
         double arista, radioCili, alturaCili, radioCono, alturaCono, radioEsfera;
         int opcion, bandera;
-        // Solicitud y lectura de datos
+        // Ciclo para la Solicitud y lectura de datos
         do {
             System.out.println("----------------------------");
             System.out.println("VOLUMEN FIGURAS GEOMETRICAS");
@@ -24,7 +24,7 @@ public class EjecutaFigura {
                     System.out.println("Ingrese la arista del cubo");
                     arista = teclado.nextDouble();
 
-                    // creacion objeto Triangulo
+                    // creacion objeto Cubo
                     Cubo cubo = new Cubo(arista, nombre);
                     // Salida de datos
                     System.out.printf("Figura: %s\nVolumen: %.2f", cubo.getNombre(), cubo.volumenCubo());
@@ -36,7 +36,7 @@ public class EjecutaFigura {
                     System.out.println("Ingrese la altura del cilindro");
                     alturaCili = teclado.nextDouble();
 
-                    // creacion objeto Triangulo
+                    // creacion objeto Cilindro
                     Cilindro cilindro = new Cilindro(radioCili, alturaCili, nombre);
                     // Salida de datos
                     System.out.printf("Figura: %s\nVolumen: %.2f", cilindro.getNombre(), cilindro.volumenCilindro());
@@ -48,7 +48,7 @@ public class EjecutaFigura {
                     System.out.println("Ingrese la altura del cono");
                     alturaCono = teclado.nextDouble();
 
-                    // creacion objeto Triangulo
+                    // creacion objeto Cono
                     Cono cono = new Cono(radioCono, alturaCono, nombre);
                     // Salida de datos
                     System.out.printf("Figura: %s\nVolumen: %.2f", cono.getNombre(), cono.volumenCono());
@@ -57,14 +57,15 @@ public class EjecutaFigura {
                     nombre = "Esfera";
                     System.out.println("Ingrese el radio de la esfera");
                     radioEsfera = teclado.nextDouble();
-                    // creacion objeto Triangulo
+                    // creacion objeto Esfera
                     Esfera esfera = new Esfera(radioEsfera, nombre);
                     // Salida de datos
                     System.out.printf("Figura: %s\nVolumen: %.2f", esfera.getNombre(), esfera.volumenEsfe());
                     break;
                 case 5:
-                    bandera = 2;
+
                     System.out.println("Fin del programa");
+                    System.exit(0);
                 default:
                     System.out.println("Opcion invalida");
                     break;

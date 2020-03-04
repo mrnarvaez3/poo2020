@@ -1,8 +1,14 @@
 package herenciaVolumen;
-
+// clase hija de Figura
 public class Cono extends Figura{
     double radioCono, alturaCono, areaCono;
 
+    /**
+     * Metodo constructor
+      * @param radioCono
+     * @param alturaCono
+     * @param nombre
+     */
     public Cono(double radioCono, double alturaCono, String nombre){
         this.radioCono = radioCono;
         this.alturaCono = alturaCono;
