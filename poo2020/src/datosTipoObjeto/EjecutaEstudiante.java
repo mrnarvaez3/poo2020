@@ -7,6 +7,7 @@ public class EjecutaEstudiante {
         //  Declaracion de variables
         String nombre, cedula, carrera, correo;
         int edad;
+        int acum = 0;
         int cont, opcion;
         Estudiante arregloEstudiante[] = new Estudiante[3];
 
@@ -34,9 +35,10 @@ public class EjecutaEstudiante {
         System.out.println("LISTA DE ESTUDIANTES ");
         System.out.println("Nombre\tCedula");
         for (cont = 0; cont < arregloEstudiante.length; cont++) {
-            System.out.println(arregloEstudiante[cont].getNombre() + "\t" + arregloEstudiante[cont].getCedula());
+            System.out.println(arregloEstudiante[cont].getNombre() + "\t" + arregloEstudiante[cont].getCedula()+"\t");
+            acum += arregloEstudiante[cont].getEdad();
         }
-
+        System.out.println("EDAD PROMEDIO DE LOS ESTUDIANTES: " + acum/arregloEstudiante.length);
         System.out.println("FIN DEL PROGRAMA");
     }
 }
