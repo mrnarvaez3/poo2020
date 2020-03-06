@@ -20,5 +20,6 @@ public abstract class Figura3 {
     public void setArea(double area) {
         this.area = area;
     }
+
     public abstract void calcularArea();
 }
